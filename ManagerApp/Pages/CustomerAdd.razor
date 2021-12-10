@@ -1,0 +1,21 @@
+﻿@page "/add"
+
+<EditForm Model="@Customer" OnValidSubmit="@SubmitForm">
+    <div class="form-group row">
+        <label for="Name" class="col-sm-3">Name: </label>
+        <InputText id="Name" class="form-control col-sm-8" @bind-Value="@Customer.Name" placeholder="Enter name"></InputText>
+    </div>
+    <div class="form-group row">
+        <label for="CarType" class="col-sm-3">Car type: </label>
+        <InputText id="CarType" class="form-control col-sm-8" @bind-Value="@Customer.CarType" placeholder="Enter car type"></InputText>
+    </div>
+    <div class="form-group row">
+        <label for="LicensePlate" class="col-sm-3">License plate: </label>
+        <InputText id="LicensePlate" class="form-control col-sm-8" @bind-Value="@Customer.LicensePlate" placeholder="Enter license plate"></InputText>
+    </div>
+    <div class="form-group row">
+        <label for="Description" class="col-sm-3">Description: </label>
+        <InputText id="Description" class="form-control col-sm-8" @bind-Value="@Customer.Description" placeholder="Description of work to do"></InputText>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</EditForm>

@@ -14,22 +14,24 @@ else
                 <th>Name</th>
                 <th>Car Type</th>
                 <th>Status</th>
+                <th>Date Added</th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var customer in Customers)
+            @foreach (var customer in Customers.OrderByDescending(a => a.DateAdded))
             {
-                <tr>
-                    <td>@customer.Name</td>
-                    <td>@customer.CarType</td>
-                    <td>@customer.Status</td>
-                    <td>
-                        <a href="@($"customer/{customer.Id}")" class="btn btn-info table-btn">Info</a>
-                    </td>
-                    <td>
-                        <a href="@($"customer/{customer.Id}/edit")" class="btn btn-info table-btn">Info</a>
-                    </td>
-                </tr>
+            <tr>
+                <td>@customer.Name</td>
+                <td>@customer.CarType</td>
+                <td>@customer.Status</td>
+                <td>@customer.DateAdded</td>
+                <td>
+                    <a href="@($"customer/{customer.Id}")" class="btn btn-info table-btn">Info</a>
+                </td>
+                <td>
+                    <a href="@($"customer/{customer.Id}/edit")" class="btn btn-info table-btn">Info</a>
+                </td>
+            </tr>
             }
         </tbody>
     </table>
