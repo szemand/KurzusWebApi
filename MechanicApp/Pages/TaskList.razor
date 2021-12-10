@@ -1,0 +1,35 @@
+﻿@page "/tasks"
+
+<h3>Task List</h3>
+
+@if (Customers == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Car Type</th>
+                <th>License Plate</th>
+                <th>Status</th>
+                <th>Date Added</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var customer in Customers.OrderByDescending(a => a.DateAdded))
+            {
+                <tr>
+                    <td>@customer.CarType</td>
+                    <td>@customer.LicensePlate</td>
+                    <td>@customer.Status</td>
+                    <td>@customer.DateAdded</td>
+                    <td>
+                        <a href="@($"customer/{customer.Id}/edit")" class="btn btn-info table-btn">Change status</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

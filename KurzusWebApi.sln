@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagerApp", "ManagerApp\Ma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagerApp.Tests", "ManagerApp.Tests\ManagerApp.Tests.csproj", "{FE4294EE-BDCE-4F21-B561-F8B99366360F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MechanicApp", "MechanicApp\MechanicApp.csproj", "{5A0BCFC6-6FEB-4153-9C19-FC9867B059DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{FE4294EE-BDCE-4F21-B561-F8B99366360F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE4294EE-BDCE-4F21-B561-F8B99366360F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE4294EE-BDCE-4F21-B561-F8B99366360F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A0BCFC6-6FEB-4153-9C19-FC9867B059DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A0BCFC6-6FEB-4153-9C19-FC9867B059DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A0BCFC6-6FEB-4153-9C19-FC9867B059DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A0BCFC6-6FEB-4153-9C19-FC9867B059DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
