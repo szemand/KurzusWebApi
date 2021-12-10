@@ -1,0 +1,45 @@
+﻿@page "/customer/{CustomerID}"
+
+@if (Customer == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <div class="form-group row">
+        <label class="col-sm-4 col-form-label">Name</label>
+        <div class="col-sm-8">
+            <label type="text" class="form-control-plaintext">@Customer.Name</label>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-4 col-form-label">Car Type</label>
+        <div class="col-sm-8">
+            <label type="text" class="form-control-plaintext">@Customer.CarType</label>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-4 col-form-label">License Plate</label>
+        <div class="col-sm-8">
+            <label type="text" class="form-control-plaintext">@Customer.LicensePlate</label>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-4 col-form-label">Description</label>
+        <div class="col-sm-8">
+            <label type="text" class="form-control-plaintext">@Customer.Description</label>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-4 col-form-label">Status</label>
+        <div class="col-sm-8">
+            <label type="text" class="form-control-plaintext">@Customer.Status</label>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-4 col-form-label">Date Added</label>
+        <div class="col-sm-8">
+            <label type="text" class="form-control-plaintext">@Customer.DateAdded.ToLongDateString()</label>
+        </div>
+    </div>
+}
