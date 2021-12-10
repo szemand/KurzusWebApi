@@ -1,0 +1,20 @@
+﻿@page "/customer/{CustomerID}/edit"
+
+@if (Customer == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <EditForm Model="@Customer" OnValidSubmit="@SubmitForm">
+        <div class="form-group row">
+            <label for="Status" class="col-sm-3">Task Status: </label>
+            <InputSelect @bind-Value="Customer.Status">
+                <option value="Felvett munka">Felvett munka</option>
+                <option value="Elvégzés alatt">Elvégzés alatt</option>
+                <option value="Befejezett">Befejezett</option>
+            </InputSelect>
+        </div>
+        <button type="submit" class="btn btn-primary">Edit</button>
+    </EditForm>
+}
