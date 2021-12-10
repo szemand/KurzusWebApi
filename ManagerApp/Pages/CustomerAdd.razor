@@ -1,6 +1,8 @@
 ﻿@page "/add"
 
 <EditForm Model="@Customer" OnValidSubmit="@SubmitForm">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
     <div class="form-group row">
         <label for="Name" class="col-sm-3">Name: </label>
         <InputText id="Name" class="form-control col-sm-8" @bind-Value="@Customer.Name" placeholder="Enter name"></InputText>
